@@ -1,0 +1,24 @@
+
+###/hello without authorization
+GET https://{{service_url}}/hello
+Accept: application/json
+
+###/hello with credentials
+GET  {{service_url}}/hello
+Accept: application/json
+Authorization: Basic user fcace89a-bbc7-4656-89b4-d81ee9477dd0
+
+###/hello with encoded credentials
+GET {{service_url}}/hello
+Accept: application/json
+Authorization: Basic dXNlcjo1YzRmNmRhMC1iMTFlLTQ0NjUtYWVmZS1lZTI0ZmZkZGUxN2Q=
+
+###/hello with https
+GET  https://{{service_url}}/hello
+Accept: application/json
+Authorization: Basic user fcace89a-bbc7-4656-89b4-d81ee9477dd0
+
+###/hello with InMemoryUser
+GET  {{service_url}}/hello
+Accept: application/json
+Authorization: Basic user 12345
